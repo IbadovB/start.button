@@ -1,9 +1,12 @@
 const start = document.querySelector(".start")
+const root = document.querySelector(".root")
+const reset = document.querySelector(".resetButton").style.display = "none"
 
-start.addEventListener("click", function () {
-    document.querySelector(".start").innerText = " " 
+function myFunction() {
+    start.style.display = "none"
+    const reset = document.querySelector(".resetButton").style.display = "block"
     const box = document.createElement("div")
-    start.appendChild(box)
+    root.appendChild(box)
 
     box.style.width = "100px"
     box.style.height = "100px"
@@ -27,5 +30,12 @@ start.addEventListener("click", function () {
         box.style.background = "red";
         box.innerHTML = " "
     }
+    
+   }
 
-})
+   function resetFunction () {
+    const reset = document.querySelector(".resetButton").style.display  = "none"
+    const root = document.querySelector(".root").style.display = "none"
+    const start = document.querySelector(".start").style.display= "block"
+}
+
