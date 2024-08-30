@@ -1,13 +1,20 @@
 const start = document.querySelector(".start")
 const root = document.querySelector(".root")
-const reset = document.querySelector(".resetButton").style.display = "none"
+const resetButton = document.querySelector(".resetButton").style.display = "none"
+
 
 function myFunction() {
-    start.style.display = "none"
-    const reset = document.querySelector(".resetButton").style.display = "block"
+    document.querySelector(".start").style.display = "none"
+    document.querySelector(".resetButton").style.display = "block"
+
+    if (document.querySelector(".root").style.display === "none") {
+        root.style.display = "block"
+
+    }
+
+
     const box = document.createElement("div")
     root.appendChild(box)
-
     box.style.width = "100px"
     box.style.height = "100px"
     box.style.border = "1px solid black"
@@ -25,17 +32,26 @@ function myFunction() {
         box.style.paddingTop = "20px"
     }
 
-
     function mouseOut() {
         box.style.background = "red";
         box.innerHTML = " "
     }
-    
-   }
 
-   function resetFunction () {
-    const reset = document.querySelector(".resetButton").style.display  = "none"
-    const root = document.querySelector(".root").style.display = "none"
-    const start = document.querySelector(".start").style.display= "block"
 }
+
+function resetFunction() {
+    const start = document.querySelector(".start").style.display = "block"
+    const reset = document.querySelector(".resetButton").style.display = "none"
+    const root = document.querySelector(".root").style.display = "none"
+  
+}
+
+
+
+
+
+
+
+
+
 
